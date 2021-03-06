@@ -1,0 +1,901 @@
+ 
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icomoon.eot?s4vx9o');
+	src: url('fonts/icomoon.eot?s4vx9o#iefix')
+			format('embedded-opentype'),
+		url('fonts/icomoon.ttf?s4vx9o') format('truetype'),
+		url('fonts/icomoon.woff?s4vx9o') format('woff'),
+		url('fonts/icomoon.svg?s4vx9o#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+	text-decoration: none !important;
+}
+
+[class^='icon-']:before,
+[class*=' icon-']:before {
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: inline-block;
+	line-height: 1;
+	font-size: 110%;
+	vertical-align: top;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-material-minimize:before {
+	content: '\ea1b';
+}
+.icon-material-request-quote:before {
+	content: '\ea1c';
+}
+.icon-visa-debit:before {
+	content: '\ea1d';
+}
+.icon-borderless:before {
+	content: '\ea1e';
+}
+.icon-material-check-circle-outline:before {
+	content: '\ea1a';
+}
+.icon-global-wifi:before {
+	content: '\ea17';
+}
+.icon-subscription:before {
+	content: '\ea18';
+}
+.icon-travel-rewards:before {
+	content: '\ea19';
+}
+.icon-drawerChat:before {
+	content: '\ea16';
+}
+.icon-fast:before {
+	content: '\ea14';
+}
+.icon-doc:before {
+	content: '\ea15';
+}
+.icon-calculator-dark:before {
+	content: '\ea12';
+}
+.icon-unfulfilled:before {
+	content: '\ea13';
+}
+.icon-android-fingerprint:before {
+	content: '\ea10';
+}
+.icon-tloc:before {
+	content: '\ea11';
+}
+.icon-asp:before {
+	content: '\ea0f';
+}
+.icon-arrow-down-filled:before {
+	content: '\ea0d';
+}
+.icon-arrow-up-filled:before {
+	content: '\ea0e';
+}
+.icon-canada-post2:before {
+	content: '\ea0c';
+}
+.icon-abm-locator-filled:before {
+	content: '\e9da';
+}
+.icon-filter:before {
+	content: '\ea08';
+}
+.icon-transactions:before {
+	content: '\ea09';
+}
+.icon-home-overview:before {
+	content: '\ea0a';
+}
+.icon-inbox-filled:before {
+	content: '\ea0b';
+}
+.icon-circleRate:before {
+	content: '\e9d9';
+}
+.icon-feedback:before {
+	content: '\e9b6';
+}
+.icon-lowFees:before {
+	content: '\e911';
+}
+.icon-2525:before {
+	content: '\e912';
+}
+.icon-approach:before {
+	content: '\e92d';
+}
+.icon-awardWinning:before {
+	content: '\e92e';
+}
+.icon-bonus:before {
+	content: '\e92f';
+}
+.icon-calculator:before {
+	content: '\e930';
+}
+.icon-great-rate:before {
+	content: '\e9b5';
+}
+.icon-help:before {
+	content: '\ea06';
+}
+.icon-tools:before {
+	content: '\ea07';
+}
+.icon-interest-charge:before {
+	content: '\ea02';
+}
+.icon-tangerine-loan-payment:before {
+	content: '\ea03';
+}
+.icon-tangerine-mortgage-payment:before {
+	content: '\ea04';
+}
+.icon-miscellaneous:before {
+	content: '\ea05';
+}
+.icon-scotiabank-logo:before {
+	content: '\ea00';
+}
+.icon-tangerine-chip:before {
+	content: '\ea01';
+}
+.icon-wheelchair:before {
+	content: '\e9cb';
+}
+.icon-tangerine-logo:before {
+	content: '\e900';
+}
+.icon-tangerine-handshake:before {
+	content: '\e901';
+}
+.icon-cheque-routingacctnumber:before {
+	content: '\e902';
+}
+.icon-cheque-ordercheque:before {
+	content: '\e903';
+}
+.icon-dollar-bill:before {
+	content: '\e9fb';
+}
+.icon-condo-fees:before {
+	content: '\e9f7';
+}
+.icon-external-transfers:before {
+	content: '\e9f8';
+}
+.icon-student-loans:before {
+	content: '\e9f9';
+}
+.icon-tangerine-rewards:before {
+	content: '\e9fa';
+}
+.icon-1:before {
+	content: '\e9cd';
+}
+.icon-aboutus:before {
+	content: '\e9ce';
+}
+.icon-calendar:before {
+	content: '\e9cf';
+}
+.icon-camera:before {
+	content: '\e9d0';
+}
+.icon-careers:before {
+	content: '\e9d1';
+}
+.icon-chat:before {
+	content: '\e9d2';
+}
+.icon-check1:before {
+	content: '\e9d3';
+}
+.icon-check2:before {
+	content: '\e9d4';
+}
+.icon-clock:before {
+	content: '\e9d5';
+}
+.icon-complete:before {
+	content: '\e9d6';
+}
+.icon-contactus:before {
+	content: '\e9d7';
+}
+.icon-delete:before {
+	content: '\e9d8';
+}
+.icon-dollar2:before {
+	content: '\e9d9';
+}
+.icon-downarrow:before {
+	content: '\e9db';
+}
+.icon-download:before {
+	content: '\e9dc';
+}
+.icon-export:before {
+	content: '\e9dd';
+}
+.icon-gallery:before {
+	content: '\e9de';
+}
+.icon-hamburgermenu:before {
+	content: '\e9df';
+}
+.icon-kabobmenu:before {
+	content: '\e9e0';
+}
+.icon-leftarrow:before {
+	content: '\e9e1';
+}
+.icon-legal:before {
+	content: '\e9e2';
+}
+.icon-list:before {
+	content: '\e9e3';
+}
+.icon-loading:before {
+	content: '\e9e4';
+}
+.icon-location:before {
+	content: '\e9e5';
+}
+.icon-mail:before {
+	content: '\e9e6';
+}
+.icon-money:before {
+	content: '\e9e7';
+}
+.icon-paperplane:before {
+	content: '\e9e8';
+}
+.icon-plus:before {
+	content: '\e9e9';
+}
+.icon-print:before {
+	content: '\e9ea';
+}
+.icon-privacy:before {
+	content: '\e9eb';
+}
+.icon-question:before {
+	content: '\e9ec';
+}
+.icon-redo:before {
+	content: '\e9ed';
+}
+.icon-rightarrow:before {
+	content: '\e9ee';
+}
+.icon-search:before {
+	content: '\e9ef';
+}
+.icon-security:before {
+	content: '\e9f0';
+}
+.icon-settings:before {
+	content: '\e9f1';
+}
+.icon-split:before {
+	content: '\e9f2';
+}
+.icon-star:before {
+	content: '\e9f3';
+}
+.icon-transfer:before {
+	content: '\e9f4';
+}
+.icon-uparrow:before {
+	content: '\e9f5';
+}
+.icon-x:before {
+	content: '\e9f6';
+}
+.icon-units:before {
+	content: '\e904';
+}
+.icon-units2:before {
+	content: '\e905';
+}
+.icon-units3:before {
+	content: '\e906';
+}
+.icon-abm-locator:before {
+	content: '\e907';
+}
+.icon-abm:before {
+	content: '\e908';
+}
+.icon-alarm:before {
+	content: '\e909';
+}
+.icon-alcoholic-drink:before {
+	content: '\e90a';
+}
+.icon-arrow:before {
+	content: '\e90b';
+}
+.icon-art:before {
+	content: '\e90c';
+}
+.icon-auto-insurance:before {
+	content: '\e90d';
+}
+.icon-auto-loan:before {
+	content: '\e90e';
+}
+.icon-baby:before {
+	content: '\e90f';
+}
+.icon-balance:before {
+	content: '\e910';
+}
+.icon-bandaid:before {
+	content: '\e913';
+}
+.icon-bank-fees:before {
+	content: '\e914';
+}
+.icon-beer:before {
+	content: '\e915';
+}
+.icon-block:before {
+	content: '\e916';
+}
+.icon-bottle:before {
+	content: '\e917';
+}
+.icon-briefcase:before {
+	content: '\e918';
+}
+.icon-bus:before {
+	content: '\e919';
+}
+.icon-business:before {
+	content: '\e91a';
+}
+.icon-canada-post:before {
+	content: '\e91b';
+}
+.icon-car:before {
+	content: '\e91c';
+}
+.icon-carwash:before {
+	content: '\e91d';
+}
+.icon-cash-withdrawal:before {
+	content: '\e91e';
+}
+.icon-champagne:before {
+	content: '\e91f';
+}
+.icon-charities:before {
+	content: '\e920';
+}
+.icon-cheque:before {
+	content: '\e921';
+}
+.icon-chequing:before {
+	content: '\e922';
+}
+.icon-childrens-clothes:before {
+	content: '\e923';
+}
+.icon-childrens-toys:before {
+	content: '\e924';
+}
+.icon-cleaning:before {
+	content: '\e925';
+}
+.icon-clothing:before {
+	content: '\e926';
+}
+.icon-coffee:before {
+	content: '\e927';
+}
+.icon-compass:before {
+	content: '\e928';
+}
+.icon-complete2:before {
+	content: '\e929';
+}
+.icon-computer:before {
+	content: '\e92a';
+}
+.icon-credit-card-other:before {
+	content: '\e92b';
+}
+.icon-credit-card-payment:before {
+	content: '\e92c';
+}
+.icon-credit-card:before {
+	content: '\e931';
+}
+.icon-dependants:before {
+	content: '\e932';
+}
+.icon-desk-1:before {
+	content: '\e933';
+}
+.icon-desk2:before {
+	content: '\e934';
+}
+.icon-dice:before {
+	content: '\e935';
+}
+.icon-dollar:before {
+	content: '\e936';
+}
+.icon-donations-and-charities:before {
+	content: '\e937';
+}
+.icon-donations:before {
+	content: '\e938';
+}
+.icon-education:before {
+	content: '\e939';
+}
+.icon-emergency-savings:before {
+	content: '\e93a';
+}
+.icon-entertainment:before {
+	content: '\e93b';
+}
+.icon-exclude-from-budget:before {
+	content: '\e93c';
+}
+.icon-family:before {
+	content: '\e93d';
+}
+.icon-fast-food:before {
+	content: '\e93e';
+}
+.icon-fees-charges:before {
+	content: '\e93f';
+}
+.icon-fines:before {
+	content: '\e940';
+}
+.icon-food-and-dining:before {
+	content: '\e941';
+}
+.icon-furniture:before {
+	content: '\e942';
+}
+.icon-gas:before {
+	content: '\e943';
+}
+.icon-gift:before {
+	content: '\e944';
+}
+.icon-glasses:before {
+	content: '\e945';
+}
+.icon-graduation:before {
+	content: '\e946';
+}
+.icon-graph:before {
+	content: '\e947';
+}
+.icon-half:before {
+	content: '\e948';
+}
+.icon-hammer:before {
+	content: '\e949';
+}
+.icon-headphones:before {
+	content: '\e94a';
+}
+.icon-health-and-beauty:before {
+	content: '\e94b';
+}
+.icon-health-insurance:before {
+	content: '\e94c';
+}
+.icon-heart:before {
+	content: '\e94d';
+}
+.icon-high:before {
+	content: '\e94e';
+}
+.icon-home-equity:before {
+	content: '\e94f';
+}
+.icon-home-insurance:before {
+	content: '\e950';
+}
+.icon-home:before {
+	content: '\e951';
+}
+.icon-hotel-services:before {
+	content: '\e952';
+}
+.icon-hotel:before {
+	content: '\e953';
+}
+.icon-import-bill-payee:before {
+	content: '\e954';
+}
+.icon-income-tax-89:before {
+	content: '\e955';
+}
+.icon-income-tax-94:before {
+	content: '\e956';
+}
+.icon-income:before {
+	content: '\e957';
+}
+.icon-insurance:before {
+	content: '\e958';
+}
+.icon-interest:before {
+	content: '\e959';
+}
+.icon-investment:before {
+	content: '\e95a';
+}
+.icon-iron:before {
+	content: '\e95b';
+}
+.icon-jewelry:before {
+	content: '\e95c';
+}
+.icon-leisure:before {
+	content: '\e95d';
+}
+.icon-lightbulb:before {
+	content: '\e95e';
+}
+.icon-loan:before {
+	content: '\e95f';
+}
+.icon-loans-taxes-fines:before {
+	content: '\e960';
+}
+.icon-location2:before {
+	content: '\e961';
+}
+.icon-lock:before {
+	content: '\e962';
+}
+.icon-low:before {
+	content: '\e963';
+}
+.icon-mail-opened:before {
+	content: '\e964';
+}
+.icon-mail2:before {
+	content: '\e965';
+}
+.icon-marine-insurance:before {
+	content: '\e966';
+}
+.icon-married:before {
+	content: '\e967';
+}
+.icon-martini:before {
+	content: '\e968';
+}
+.icon-media:before {
+	content: '\e969';
+}
+.icon-medication:before {
+	content: '\e96a';
+}
+.icon-medium-high:before {
+	content: '\e96b';
+}
+.icon-medium-low:before {
+	content: '\e96c';
+}
+.icon-medium:before {
+	content: '\e96d';
+}
+.icon-membership:before {
+	content: '\e96e';
+}
+.icon-messaging:before {
+	content: '\e96f';
+}
+.icon-mobile:before {
+	content: '\e970';
+}
+.icon-money-sent:before {
+	content: '\e971';
+}
+.icon-more:before {
+	content: '\e972';
+}
+.icon-mortgage:before {
+	content: '\e973';
+}
+.icon-move-money:before {
+	content: '\e974';
+}
+.icon-no:before {
+	content: '\e975';
+}
+.icon-no-daily-fees:before {
+	content: '\e976';
+}
+.icon-no-minimum-balance:before {
+	content: '\e977';
+}
+.icon-no-money-limit:before {
+	content: '\e978';
+}
+.icon-no-service-charge:before {
+	content: '\e979';
+}
+.icon-no-unfair-fees:before {
+	content: '\e97a';
+}
+.icon-one:before {
+	content: '\e97b';
+}
+.icon-other-pension:before {
+	content: '\e97c';
+}
+.icon-other:before {
+	content: '\e97d';
+}
+.icon-pacifier:before {
+	content: '\e97e';
+}
+.icon-paddleball:before {
+	content: '\e97f';
+}
+.icon-paintbrush:before {
+	content: '\e980';
+}
+.icon-paper-plane:before {
+	content: '\e981';
+}
+.icon-papers:before {
+	content: '\e982';
+}
+.icon-parking:before {
+	content: '\e983';
+}
+.icon-party:before {
+	content: '\e984';
+}
+.icon-passport:before {
+	content: '\e985';
+}
+.icon-paystub:before {
+	content: '\e986';
+}
+.icon-pens:before {
+	content: '\e987';
+}
+.icon-percent:before {
+	content: '\e988';
+}
+.icon-pet-insurance:before {
+	content: '\e989';
+}
+.icon-pets:before {
+	content: '\e98a';
+}
+.icon-pharmacy:before {
+	content: '\e98b';
+}
+.icon-pin-charge:before {
+	content: '\e98c';
+}
+.icon-plane:before {
+	content: '\e98d';
+}
+.icon-play-video:before {
+	content: '\e98e';
+}
+.icon-pocket-money:before {
+	content: '\e98f';
+}
+.icon-pre-authorized:before {
+	content: '\e990';
+}
+.icon-print2:before {
+	content: '\e991';
+}
+.icon-profile-filled:before {
+	content: '\e992';
+}
+.icon-profile:before {
+	content: '\e993';
+}
+.icon-projected-investment:before {
+	content: '\e994';
+}
+.icon-property-taxes:before {
+	content: '\e995';
+}
+.icon-question2:before {
+	content: '\e996';
+}
+.icon-rattle:before {
+	content: '\e997';
+}
+.icon-recurring-bills:before {
+	content: '\e998';
+}
+.icon-regular-savings:before {
+	content: '\e999';
+}
+.icon-rent-paid:before {
+	content: '\e99a';
+}
+.icon-rental-income:before {
+	content: '\e99b';
+}
+.icon-resp:before {
+	content: '\e99c';
+}
+.icon-restaurant:before {
+	content: '\e99d';
+}
+.icon-restricted1:before {
+	content: '\e99e';
+}
+.icon-restricted2:before {
+	content: '\e99f';
+}
+.icon-retirement-savings:before {
+	content: '\e9a0';
+}
+.icon-rrsp:before {
+	content: '\e9a1';
+}
+.icon-savings-transfers:before {
+	content: '\e9a2';
+}
+.icon-savings:before {
+	content: '\e9a3';
+}
+.icon-school-bus:before {
+	content: '\e9a4';
+}
+.icon-scissors:before {
+	content: '\e9a5';
+}
+.icon-securities:before {
+	content: '\e9a6';
+}
+.icon-send-cheque:before {
+	content: '\e9a7';
+}
+.icon-shopping-cart:before {
+	content: '\e9a8';
+}
+.icon-shopping:before {
+	content: '\e9a9';
+}
+.icon-signpost:before {
+	content: '\e9aa';
+}
+.icon-sin:before {
+	content: '\e9ab';
+}
+.icon-snowglobe:before {
+	content: '\e9ac';
+}
+.icon-spa:before {
+	content: '\e9ad';
+}
+.icon-split2:before {
+	content: '\e9ae';
+}
+.icon-sporting-event:before {
+	content: '\e9af';
+}
+.icon-sports-apparel:before {
+	content: '\e9b0';
+}
+.icon-sports:before {
+	content: '\e9b1';
+}
+.icon-sun:before {
+	content: '\e9b2';
+}
+.icon-support-income:before {
+	content: '\e9b3';
+}
+.icon-surfboard:before {
+	content: '\e9b4';
+}
+.icon-tangerine-cafe:before {
+	content: '\e9b7';
+}
+.icon-tangerine:before {
+	content: '\e9b8';
+}
+.icon-tfsa:before {
+	content: '\e9b9';
+}
+.icon-three:before {
+	content: '\e9ba';
+}
+.icon-tie:before {
+	content: '\e9bb';
+}
+.icon-toll:before {
+	content: '\e9bc';
+}
+.icon-tooth:before {
+	content: '\e9bd';
+}
+.icon-trailer:before {
+	content: '\e9be';
+}
+.icon-train:before {
+	content: '\e9bf';
+}
+.icon-transfer-money:before {
+	content: '\e9c0';
+}
+.icon-transfer-payroll:before {
+	content: '\e9c1';
+}
+.icon-transfer-success:before {
+	content: '\e9c2';
+}
+.icon-transfers:before {
+	content: '\e9c3';
+}
+.icon-travel-insurance:before {
+	content: '\e9c4';
+}
+.icon-trophy:before {
+	content: '\e9c5';
+}
+.icon-trust-fund:before {
+	content: '\e9c6';
+}
+.icon-tv:before {
+	content: '\e9c7';
+}
+.icon-two:before {
+	content: '\e9c8';
+}
+.icon-uncategorized-expenses:before {
+	content: '\e9c9';
+}
+.icon-uncategorized-income:before {
+	content: '\e9ca';
+}
+.icon-uncategorized-transfers:before {
+	content: '\e9cb';
+}
+.icon-us:before {
+	content: '\e9cc';
+}
+.icon-warning:before {
+	content: '\e9fc';
+}
+.icon-weights:before {
+	content: '\e9fd';
+}
+.icon-window:before {
+	content: '\e9fe';
+}
+.icon-wrench:before {
+	content: '\e9ff';
+}

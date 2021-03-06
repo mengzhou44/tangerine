@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'TangerineCircular';
+    font-style: normal;
+    font-weight: bold;
+    src: url('fonts/TangerineCircular-Bold.eot?#iefix') format('embedded-opentype'), 
+         url('fonts/TangerineCircular-Bold.woff') format('woff'), 
+         url('fonts/TangerineCircular-Bold.ttf') format('truetype'), 
+         url('fonts/TangerineCircular-Bold.svg#TangerineCircular') format('svg');
+  }
+
+  @font-face {
+    font-family: 'TangerineCircular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/lineto-tangerinecircular-book.eot?#iefix') format('embedded-opentype'), 
+         url('fonts/lineto-tangerinecircular-book.woff') format('woff'), 
+         url('fonts/lineto-tangerinecircular-book.ttf') format('truetype'), 
+         url('fonts/lineto-tangerinecircular-book.svg#TangerineCircular') format('svg');
+  }
