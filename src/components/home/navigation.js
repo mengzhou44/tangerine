@@ -76,17 +76,26 @@ const ContentBox =  styled.div`
 
        .nav-products {
            width: 100%; 
-           padding: 2rem; 
+         
            
            li {
+               padding-left: 2rem; 
+               
+               border-left: 3px solid #fff;
                display: block; 
                &:not(:last-of-type) {
                   margin-bottom: 2rem; 
                }  
+
+               &:hover {
+                 border-left: 3px solid var(--text-color); 
+              }
            }
 
            a {
               color: var(--text-color);
+
+              
            }
        }
 

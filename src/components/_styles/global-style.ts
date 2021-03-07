@@ -9,15 +9,7 @@ const GlobalStyle = createGlobalStyle`
         
         --primary: #EA7024;
     
-       
-        --grey-light-1: #faf9f9;
-        --grey-light-2: #f4f2f2;
-        --grey-light-3: #f0eeee;
-        --grey-light-4: #ccc;
-        
-        --grey-dark-1: #333;
-        --grey-dark-2: #777;
-        --grey-dark-3: #999;
+        --grey-1: rgb(224,224,224);
 
         --text-color: rgb(51,51,51);
        
