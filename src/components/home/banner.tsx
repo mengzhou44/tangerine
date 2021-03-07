@@ -9,17 +9,78 @@ enum Tab {
 }
 
 const BannerBox = styled.div`
+      
       height: 41.5rem; 
-      background-image: url('images/mtg-awareness-tablet.jpeg');
-      background-color: var(--text-color);
-      background-size:cover; 
-      position: relative; 
+      display: flex; 
+      flex-direction: column;
+      border: 1px solid green;
+    
+      .slide-box {
+        flex: 1 0 100%; 
+        position: relative;
+        border: 1px solid red;
+       
+        a{
+            position: absolute; 
+            border-radius: 50%;
+            background-color: #fff; 
+            width: 3rem;
+            height: 3rem; 
+            display: flex;
+            justify-content:center;
+            align-items:center; 
+            background-color: var(--tab-color);
+            cursor: pointer; 
+            
+            &:hover {
+               
+            }
+
+
+            &.prev{
+                top: 50%;
+                left: 1rem; 
+            }
+
+             &.next{
+                top: 50%;
+                right: 1rem; 
+             }
+
+            i {                
+                display: flex;
+                justify-content:center;
+                align-items:center; 
+                font-size: 2.5rem;
+                color: var(--grey-1);
+            }
+        }
+      }
+
+      .slide {
+         height:100%;
+         width: 100%;
+         background-color: var(--text-color);
+         background-size:cover; 
+      }
+
+      .slide.slide-saveWith {
+         background-image: url('images/ETF_launch_tablet.jpeg');
+         animation: moveToRight .5s;
+      }
+     
+      .slide.slide-globalETFPortfolios {
+         background-image: url('images/bundle_tablet.jpeg');
+         animation: moveToRight .5s;
+      }
+
+      .slide.slide-greatMortgageRates {
+        background-image: url('images/mtg-awareness-tablet.jpeg');
+        animation: moveToRight .5s;
+      }
 
      .tabs {
-         position: absolute; 
-         height: 7.6rem; 
-         bottom: 0; 
-         left:0; 
+         flex: 0 0 7.6rem;
          width:100%;
          background-color: #fff;
 
@@ -63,7 +124,6 @@ const BannerBox = styled.div`
                 top: -11px;
              }
          }
-
      }
 
      .globalETFPortfolios .saveWith {
@@ -76,9 +136,6 @@ const BannerBox = styled.div`
      }
 
 `
-
-
- 
 
 function getTabName(tab:Tab) {
     switch(tab) {
@@ -104,7 +161,56 @@ export default function Banner() {
         return res;
     }
 
-    return  <BannerBox>          
+    function renderSlide() {
+        switch(currentTab) {
+             case Tab.SaveWith: 
+                  return  <div className='slide slide-saveWith'>
+                  </div>
+             case Tab.GlobalETFPortfolios:
+                  return  <div className='slide slide-globalETFPortfolios'>
+                </div>   
+             default:
+                  return  <div className='slide slide-greatMortgageRates'>
+                 </div>    
+        }
+    }
+
+    function moveToPrev() {
+        switch(currentTab) {
+            case Tab.SaveWith: 
+                 setCurrentTab(Tab.GreatMortgageRates)
+                 break
+            case Tab.GlobalETFPortfolios:
+                setCurrentTab(Tab.SaveWith)
+                break
+            default:
+                setCurrentTab(Tab.GlobalETFPortfolios)
+        }
+    }
+
+    function moveToNext() {
+        switch(currentTab) {
+            case Tab.SaveWith: 
+                 setCurrentTab(Tab.GlobalETFPortfolios)
+                 break
+            case Tab.GlobalETFPortfolios:
+                setCurrentTab(Tab.GreatMortgageRates)
+                break
+            default:
+                setCurrentTab(Tab.SaveWith)
+        }
+    }
+
+    return  <BannerBox>        
+           <div className='slide-box'>
+               {renderSlide()} 
+
+               <a className='prev'  href='#' aria-label='Previous' onClick={()=> moveToPrev()}><i className='icon-leftarrow'></i></a>
+               <a className='next'  href='#' aria-label='Next' onClick={()=> moveToNext()} ><i className='icon-rightarrow'></i></a>
+
+            </div>
+           {renderSlide()}
+
            <ul className={getTabsClass()}>
                   <li 
                       onClick={()=> setCurrentTab(Tab.SaveWith)} 
@@ -118,7 +224,7 @@ export default function Banner() {
                        <span>Global ETF Portfolios</span>
                   </li>
                   <li 
-                    onClick={()=> setCurrentTab(Tab.GreatMortgageRates)}
+                      onClick={()=> setCurrentTab(Tab.GreatMortgageRates)}
                       className={getTabClass(Tab.GreatMortgageRates)}
                   >
                       <span>Great Mortgage rates </span>

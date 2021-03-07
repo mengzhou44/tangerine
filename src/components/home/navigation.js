@@ -16,14 +16,7 @@ const NavigationBox =  styled.div`
 
    animation: moveToRight .5s;  
 
-   @keyframes moveToRight {
-        0% {
-            transform: translateX(-50%);
-        }
-        100% {
-           transform: translateX(0)  
-        }
-    }
+  
 `
 
 export default function Navigation({onClose}) {
