@@ -13,14 +13,14 @@ const BannerBox = styled.div`
       height: 41.5rem; 
       display: flex; 
       flex-direction: column;
-      border: 1px solid green;
-    
+      justify-content: space-between;
+      border-bottom: 1px solid var(--grey-1);
+
       .slide-box {
-        flex: 1 0 100%; 
+        flex: 1;         
         position: relative;
-        border: 1px solid red;
-       
-        a{
+         
+        .nav {
             position: absolute; 
             border-radius: 50%;
             background-color: #fff; 
@@ -30,22 +30,14 @@ const BannerBox = styled.div`
             justify-content:center;
             align-items:center; 
             background-color: var(--tab-color);
+          
             cursor: pointer; 
+            transition: all .2s;
             
             &:hover {
-               
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-light);
             }
-
-
-            &.prev{
-                top: 50%;
-                left: 1rem; 
-            }
-
-             &.next{
-                top: 50%;
-                right: 1rem; 
-             }
 
             i {                
                 display: flex;
@@ -55,6 +47,19 @@ const BannerBox = styled.div`
                 color: var(--grey-1);
             }
         }
+
+        .nav-prev{
+                top: 43%;
+                left: 1rem; 
+         }
+
+        .nav-next{
+                top: 43%;
+                right: 1rem; 
+         }
+
+           
+        
       }
 
       .slide {
@@ -80,7 +85,7 @@ const BannerBox = styled.div`
       }
 
      .tabs {
-         flex: 0 0 7.6rem;
+         height: 7.6rem;
          width:100%;
          background-color: #fff;
 
@@ -202,16 +207,15 @@ export default function Banner() {
     }
 
     return  <BannerBox>        
-           <div className='slide-box'>
-               {renderSlide()} 
+            <div className='slide-box'>
+             {renderSlide()} 
 
-               <a className='prev'  href='#' aria-label='Previous' onClick={()=> moveToPrev()}><i className='icon-leftarrow'></i></a>
-               <a className='next'  href='#' aria-label='Next' onClick={()=> moveToNext()} ><i className='icon-rightarrow'></i></a>
+            <div className='nav nav-prev'   aria-label='Previous' onClick={()=> moveToPrev()}><i className='icon-leftarrow'></i></div>
+            <div className='nav nav-next'  aria-label='Next' onClick={()=> moveToNext()} ><i className='icon-rightarrow'></i></div>
 
-            </div>
-           {renderSlide()}
-
-           <ul className={getTabsClass()}>
+            </div>  
+          
+            <ul className={getTabsClass()}>
                   <li 
                       onClick={()=> setCurrentTab(Tab.SaveWith)} 
                       className={getTabClass(Tab.SaveWith)}
@@ -229,6 +233,6 @@ export default function Banner() {
                   >
                       <span>Great Mortgage rates </span>
                   </li>
-           </ul>
+           </ul>    
     </BannerBox>
 }
