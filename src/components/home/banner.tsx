@@ -28,12 +28,9 @@ const BannerBox = styled.div`
          font-size: 19px;
          color: var(--tab-color);
          font-weight: 700; 
-         
-
+        
          li {
-
              cursor: pointer; 
-
              flex: 1; 
              display: flex; 
              justify-content: center; 
@@ -50,6 +47,20 @@ const BannerBox = styled.div`
                  background-color: var(--primary);
                  color: #fff;
                  margin: 0;
+                 position: relative; 
+             }
+
+             &.selected::after {
+                width: 30px;
+                height: 30px;
+                content: '';
+                transform: translateX(-50%) rotate(45deg);
+                border-radius: 6px;
+                background-color: var(--primary);
+                position: absolute;
+                z-index: 0;
+                left: 50%;
+                top: -11px;
              }
          }
 
@@ -65,6 +76,9 @@ const BannerBox = styled.div`
      }
 
 `
+
+
+ 
 
 function getTabName(tab:Tab) {
     switch(tab) {
