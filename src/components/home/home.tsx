@@ -1,4 +1,5 @@
 import Header from './header' 
+import Banner from './banner'
 import Footer from './footer'
 import styled from 'styled-components'
  
@@ -10,6 +11,7 @@ export default function Home() {
    
     return <HomeBox>
         <Header />
+        <Banner />
         <Footer />
     </HomeBox>
 }

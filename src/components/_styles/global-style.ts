@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
         --grey-1: rgb(224,224,224);
 
         --text-color: rgb(51,51,51);
+        --tab-color: rgb(117,117,117);
        
         --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
         --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
