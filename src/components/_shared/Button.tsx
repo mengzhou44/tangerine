@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export enum ButtonTypes {
     white,
-    transparent
+    transparent,
+    solid,
 } 
 
 export interface ButtonProps {
@@ -47,6 +48,13 @@ export const Button = styled.button<ButtonProps>`
                            background-color: #fff;
                            color: var(--primary);
                            border: 2px solid #fff;
+                         `
+
+         else if (buttonType === ButtonTypes.solid)
+                   return `
+                           background-color: var(--primary);
+                           color: #fff;
+                           border: 2px solid  var(--primary);
                          `
           return    `
                          color: #fff;

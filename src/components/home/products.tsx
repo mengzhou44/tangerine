@@ -1,10 +1,13 @@
+import React from 'react'
 import styled from 'styled-components'
+import { Button, ButtonTypes } from '../_shared/Button'
 import { BreakPoint, respond } from '../_styles/media'
 
 export const ProductsBox = styled.div`
     
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 5rem;
     ${respond(BreakPoint.largest, `
             width: 100%; 
    `)}
@@ -45,7 +48,7 @@ export const ProductsBox = styled.div`
         ${respond(BreakPoint.largest, `
             flex: 0  0  45%;
             margin-bottom: 2rem; 
-            max-width: 40rem; 
+            width:100%;
         `)}
 
         ${respond(BreakPoint.medium, `
@@ -66,6 +69,12 @@ export const ProductsBox = styled.div`
             height: 4.8rem; 
             margin-bottom: 5rem; 
             text-align: center;
+
+            ${respond(BreakPoint.large, `
+              width: 100%;
+              margin-bottom: 2rem; 
+           `)}
+
         }
 
         a,p {
@@ -73,6 +82,66 @@ export const ProductsBox = styled.div`
            color: var(--text-color);
         }
         
+    }
+
+    .secure{
+       
+        display: flex; 
+        align-items:center; 
+        justify-content: space-between;
+        margin-top: 5rem; 
+        width: 100%;
+
+        ${respond(BreakPoint.largest, `
+            padding-left: 3rem;
+            padding-right: 3rem; 
+       `)}
+        
+        ${respond(BreakPoint.medium, `
+            flex-direction: column;
+            .img-box {
+                order: -1; 
+                img {
+                    max-width: 15rem;
+                    height: auto; 
+                    float: none; 
+                }
+            }
+            .text{
+               margin-top: 3rem; 
+
+               button {
+                   margin-top: 2rem; 
+               }
+            }
+        `)}
+
+        .text{
+            flex: 3;
+            align-self:stretch; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start; 
+            
+            h2{
+                font-size: 2.8rem; 
+                font-weight: 700; 
+            }
+
+            p {
+                font-size: 1.8rem;
+            }
+        }
+
+        .img-box {
+            flex: 1;
+            img{
+                 width: 80%;
+                 height: auto; 
+                float: right;
+            }
+        }
     }
 `
 export default function Products() {
@@ -106,6 +175,20 @@ export default function Products() {
        
           </div>
      
+          <div className="secure">
+              <div className="text">
+                 <h2>Safe and secure banking</h2>
+                 <p>
+                   Your safety and security is a top priority for us. We use proven security technology, strict privacy standards, identity confirmation controls and 24/7/365 real-time monitoring on transactions.
+                 </p>
+                 
+                 <Button buttonType={ButtonTypes.solid} >Learn More</Button>
+              </div>
+              <div className="img-box">
+                  <img src='images/security-checkmark.jpeg' alt='security' />
+              </div>
+            
+          </div>
           
     </ProductsBox>
 }
