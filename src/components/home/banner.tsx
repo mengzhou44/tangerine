@@ -173,7 +173,7 @@ const BannerBox = styled.div`
 			justify-content: center;
 			align-items: center;
             text-align: center; 
-           
+            position: relative;
 			margin: 1.5rem 0;
 
 			&:not(:last-of-type) {
@@ -185,11 +185,12 @@ const BannerBox = styled.div`
 				background-color: var(--primary);
 				color: #fff;
 				margin: 0;
+              
 				position: relative;
-                z-index:2;
+                z-index:1;
 			}
 
-			&.selected::after{
+			&.selected::before{
 				width: 30px;
 				height: 30px;
 				content: '';
@@ -197,7 +198,7 @@ const BannerBox = styled.div`
 				border-radius: 6px;
 				background-color: var(--primary);
 				position: absolute;
-				z-index: 1;
+				z-index: -1;
 				left: 50%;
 				top: -11px;
 			}
