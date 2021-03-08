@@ -19,7 +19,7 @@ export const Button = styled.button<ButtonProps>`
      text-align: center;
 
      //box-model 
-     padding: .5rem 2rem;
+     padding: .95rem 2rem;
      border: none; 
      border-radius: 2rem;
      font-size: 1.8rem; 

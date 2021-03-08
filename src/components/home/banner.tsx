@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import { Button, ButtonTypes } from '../_shared/Button'
 
 enum Tab {
 	SaveWith,
@@ -65,13 +66,49 @@ const BannerBox = styled.div`
             background-color: var(--text-color);
             background-size: cover;
             visibility: hidden; 
-          
-        }
 
-        .saveWith {
-            background-image: url('images/ETF_launch_tablet.jpeg');
+            .content {
+                position: absolute; 
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start; 
+                top: 4rem;
+                left:17rem; 
+                color: #fff;
+                z-index:2; 
+                width: 47.1rem; 
+
+                .title{
+                    font-size: 4.8rem; 
+                    font-weight: 700;
+                    text-align:  left; 
+                    line-height: 5.8rem;
+                }
+                .info{
+                    margin-top: 3.2rem; 
+                    font-size: 1.6rem; 
+                    line-height: 2.2rem; 
+                    margin-bottom: 4rem; 
+                }
+
+                button{ 
+                    margin-top: 
+                }
+            }
+            img {
+                position: absolute; 
+                display: block; 
+                right:0;
+                top: 0; 
+                border-bottom-left-radius: 7rem;
+                width:  auto;
+                height: 100%; 
+            }
             
         }
+
+       
+       
 
         .globalETFPortfolios {
             background-image: url('images/bundle_tablet.jpeg');
@@ -208,10 +245,21 @@ export default function Banner() {
 	return (
 		<BannerBox>
 			<div className='slide-box'>
-					<div className={getSlideClass(Tab.SaveWith)}></div>
+					<div className={getSlideClass(Tab.SaveWith)}>
+                         <div className='content'>
+                              <div className="title">
+                                  Ready to make every dollar count?
+                              </div>
+                              <div className="info">
+                                 Get a 2.10% savings rate when you open your first Savings and Chequing Accounts. Plus, you could earn $150*.
+                              </div>
+                              <Button buttonType={ButtonTypes.white}>Learn More</Button>
+                         </div>
+                         <img src='/images/bundle_tablet.jpeg' alt='save with' />
+  
+                    </div>
 					<div className={getSlideClass(Tab.GlobalETFPortfolios)}></div>
 					<div className={getSlideClass(Tab.GreatMortgageRates)}></div>
-				 
 				<div
 					className='nav nav-prev'
 					aria-label='Previous'
