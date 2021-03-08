@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Button, ButtonTypes } from '../_shared/Button'
+import { BreakPoint, respond } from '../_styles/media'
 
 enum Tab {
 	SaveWith,
@@ -72,11 +73,11 @@ const BannerBox = styled.div`
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start; 
-                top: 4rem;
-                left:17rem; 
+                top: 2rem;
+                left:15rem; 
                 color: #fff;
                 z-index:2; 
-                width: 47.1rem; 
+                width: 45rem; 
 
                 .title{
                     font-size: 4.8rem; 
@@ -90,37 +91,46 @@ const BannerBox = styled.div`
                     line-height: 2.2rem; 
                     margin-bottom: 4rem; 
                 }
-
-                button{ 
-                    margin-top: 
-                }
             }
-            img {
+
+            .img-box {
                 position: absolute; 
                 display: block; 
                 right:0;
                 top: 0; 
                 border-bottom-left-radius: 7rem;
-                width:  auto;
+                width:  67rem;
                 height: 100%; 
             }
             
         }
 
-       
-       
+        .saveWith .img-box{
+                background-image: url('./images/bundle_desktop.jpeg');
+                background-size: cover;
+                ${respond(BreakPoint.largest, `
+                    background-image: url('./images/bundle_tablet.jpeg');
+                `)}
+            }
 
-        .globalETFPortfolios {
-            background-image: url('images/bundle_tablet.jpeg');
-            
-        }
+         .globalETFPortfolios .img-box {
+                background-image: url('./images/ETF_launch_desktop.jpeg');
+                background-size: cover;
+                ${respond(BreakPoint.largest, `
+                    background-image: url('./images/ETF_launch_tablet.jpeg');
+                `)}
+	     }
 
-        .greatMortgageRates {
-            background-image: url('images/mtg-awareness-tablet.jpeg');	
-            
-        }
+         .greatMortgageRates .img-box  {
+                background-image: url('./images/mtg-awareness-desktop.jpeg');
+                background-size: cover;
+                ${respond(BreakPoint.largest, `
+                    background-image: url('./images/mtg-awareness-tablet.jpeg');
+                `)}
+		  }
 
-        .slide.selected {
+
+         .selected {
             visibility: visible;
             animation: moveToRight 1s; 
         }
@@ -245,21 +255,79 @@ export default function Banner() {
 	return (
 		<BannerBox>
 			<div className='slide-box'>
-					<div className={getSlideClass(Tab.SaveWith)}>
-                         <div className='content'>
-                              <div className="title">
-                                  Ready to make every dollar count?
-                              </div>
-                              <div className="info">
-                                 Get a 2.10% savings rate when you open your first Savings and Chequing Accounts. Plus, you could earn $150*.
-                              </div>
-                              <Button buttonType={ButtonTypes.white}>Learn More</Button>
-                         </div>
-                         <img src='/images/bundle_tablet.jpeg' alt='save with' />
-  
-                    </div>
-					<div className={getSlideClass(Tab.GlobalETFPortfolios)}></div>
-					<div className={getSlideClass(Tab.GreatMortgageRates)}></div>
+            <div className={getSlideClass(Tab.SaveWith)}>
+					<div className='content'>
+						<div className='title'>
+							Ready to make every
+							dollar count?
+						</div>
+						<div className='info'>
+							Get a 2.10% savings rate
+							when you open your first
+							Savings and Chequing
+							Accounts. Plus, you
+							could earn $150*.
+						</div>
+						<Button
+							buttonType={
+								ButtonTypes.white
+							}
+						>
+							Learn More
+						</Button>
+					</div>
+				 
+                    <div className='img-box'></div>
+				</div>
+				<div
+					className={getSlideClass(
+						Tab.GlobalETFPortfolios
+					)}
+				>
+					<div className='content'>
+						<div className='title'>
+							Investing is in.
+						</div>
+						<div className='info'>
+							New Global ETF
+							Portfolios.In
+						</div>
+						<Button
+							buttonType={
+								ButtonTypes.white
+							}
+						>
+							Learn More
+						</Button>
+					</div>
+
+                    <div className='img-box'></div>
+				</div>
+				<div
+					className={getSlideClass(
+						Tab.GreatMortgageRates
+					)}
+				>
+					<div className='content'>
+						<div className='title'>
+							A mortgage rate to brag
+							about
+						</div>
+						<div className='info'>
+							Get a 5 year variable
+							rate of 1.45% / 1.47%
+							APR*.
+						</div>
+						<Button
+							buttonType={
+								ButtonTypes.white
+							}
+						>
+							Learn More
+						</Button>
+					</div>
+                    <div className='img-box'></div>
+				</div>
 				<div
 					className='nav nav-prev'
 					aria-label='Previous'
@@ -274,6 +342,7 @@ export default function Banner() {
 				>
 					<i className='icon-rightarrow'></i>
 				</div>
+
 			</div>
 
 			<ul className={getTabsClass()}>
