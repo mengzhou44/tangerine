@@ -30,6 +30,7 @@ const BannerBox = styled.div`
 			justify-content: center;
 			align-items: center;
 			background-color: var(--tab-color);
+            z-index: 3; 
 
 			cursor: pointer;
 			transition: all 0.2s;
@@ -73,23 +74,39 @@ const BannerBox = styled.div`
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start; 
+                margin-right: 2rem; 
                 top: 2rem;
                 left:15rem; 
                 color: #fff;
                 z-index:2; 
                 width: 45rem; 
 
+                ${respond(BreakPoint.medium, `
+                      left:2rem; 
+                      padding: 3rem; 
+                      text-align: center;
+                      align-items: center; 
+               `)}
+
                 .title{
                     font-size: 4.8rem; 
                     font-weight: 700;
                     text-align:  left; 
-                    line-height: 5.8rem;
+                    line-height: 135%;
+
+                    ${respond(BreakPoint.medium, `
+                        font-size: 3.2rem;
+                        text-align: center; 
+                        
+                    `)}
                 }
                 .info{
                     margin-top: 3.2rem; 
+                    margin-bottom: 4rem; 
+                    
                     font-size: 1.6rem; 
                     line-height: 2.2rem; 
-                    margin-bottom: 4rem; 
+                    
                 }
             }
 
@@ -111,9 +128,9 @@ const BannerBox = styled.div`
                 ${respond(BreakPoint.largest, `
                     background-image: url('./images/bundle_tablet.jpeg');
                 `)}
-            }
+        }
 
-         .globalETFPortfolios .img-box {
+        .globalETFPortfolios .img-box {
                 background-image: url('./images/ETF_launch_desktop.jpeg');
                 background-size: cover;
                 ${respond(BreakPoint.largest, `
@@ -136,7 +153,6 @@ const BannerBox = styled.div`
         }
 	}
 
-	
 
 	.tabs {
 		height: 7.6rem;
@@ -145,32 +161,35 @@ const BannerBox = styled.div`
 
 		list-style: none;
 		display: flex;
-		font-size: 19px;
+		font-size: 1.9rem;
 		color: var(--tab-color);
 		font-weight: 700;
 
+       
 		li {
 			cursor: pointer;
 			flex: 1;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
+            text-align: center; 
+           
 			margin: 1.5rem 0;
 
 			&:not(:last-of-type) {
 				border-right: 1px solid var(--tab-color);
 			}
-
+   
 			&.selected {
 				border-right: none;
 				background-color: var(--primary);
 				color: #fff;
 				margin: 0;
 				position: relative;
+                z-index:2;
 			}
 
-			&.selected::after {
+			&.selected::after{
 				width: 30px;
 				height: 30px;
 				content: '';
@@ -178,7 +197,7 @@ const BannerBox = styled.div`
 				border-radius: 6px;
 				background-color: var(--primary);
 				position: absolute;
-				z-index: 0;
+				z-index: 1;
 				left: 50%;
 				top: -11px;
 			}

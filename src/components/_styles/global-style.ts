@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 
         --text-color: rgb(51,51,51);
         --tab-color: rgb(117,117,117);
-        
+        --card-border-color:  #e0e0e0;
        
         --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
         --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
@@ -43,20 +43,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
 
-  h1 {
-        font-size: 2.25rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 1.5rem 3rem;
-       
-  }
-  h2 {
-        font-size:  1.75rem;
-        font-weight: 400;
-        text-transform: uppercase;
-  }
-
+ 
   @keyframes moveToRight {
         0% {
             transform: translateX(-100%);
