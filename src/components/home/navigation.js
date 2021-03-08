@@ -1,4 +1,5 @@
-import React from 'react'
+ 
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import { Button, ButtonTypes } from '../_shared/Button'
 import { LinkButton } from '../_shared/LinkButton'
@@ -13,9 +14,7 @@ const NavigationBox =  styled.div`
    height: 100%;
    z-index: 1000; 
    background-color: rgba(0,0,0, .7);
-
    animation: moveToRight .5s;  
-
   
 `
 
@@ -37,6 +36,7 @@ const ContentBox =  styled.div`
        background-color: #fff;
        z-index: 1001; 
        overflow: auto;
+       transition: all .5s; 
      
        .nav-buttons {
            flex: 0 0 10rem;
@@ -118,17 +118,31 @@ const ContentBox =  styled.div`
                }
            }
        }
+
+       .closing {
+            animation: fadeout .5s; 
+       }
 `
 
 export function Content({onClose}) {
+
+    const [closing, setClosing] = useState(false)
+    function getClass(className) {
+         if (closing === false)  return className;
+         return `${className} closing`
+    }
+      
      return <ContentBox>
-         <div className='nav-buttons'>
-             <div className='icon-x' onClick={()=> onClose()}></div>
+         <div className={getClass('nav-buttons')}>
+             <div className='icon-x' onClick={()=> {
+                 setClosing(true)
+                 setTimeout(()=> onClose(), 400);
+            }}></div>
             <Button buttonType={ButtonTypes.white}>Sign Me Up</Button>
             <Button buttonType={ButtonTypes.transparent}>Log Me In</Button>
         </div>
        
-        <ul className='nav-products'>
+        <ul className={getClass('nav-products')}>  
              <li>
                  <a href='#'>
                    Products
@@ -151,7 +165,7 @@ export function Content({onClose}) {
             </li>
         </ul>
 
-        <div className='nav-links'>
+        <div className={getClass('nav-links')}>  
             <LinkButton>
               <span> <i className="material-icons"> language</i></span>Francis
             </LinkButton>

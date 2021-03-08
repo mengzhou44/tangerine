@@ -55,31 +55,41 @@ const BannerBox = styled.div`
 			top: 43%;
 			right: 1rem;
 		}
+
+        .slide {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left:0;
+            top:0; 
+            background-color: var(--text-color);
+            background-size: cover;
+            visibility: hidden; 
+          
+        }
+
+        .saveWith {
+            background-image: url('images/ETF_launch_tablet.jpeg');
+            
+        }
+
+        .globalETFPortfolios {
+            background-image: url('images/bundle_tablet.jpeg');
+            
+        }
+
+        .greatMortgageRates {
+            background-image: url('images/mtg-awareness-tablet.jpeg');	
+            
+        }
+
+        .slide.selected {
+            visibility: visible;
+            animation: moveToRight 1s; 
+        }
 	}
 
-	.slide {
-		height: 100%;
-		width: 100%;
-		background-color: var(--text-color);
-		background-size: cover;
-		transform: translateX(-100%);
-		transition: all 1s;
-	}
-
-	.slide.slide-saveWith {
-		background-image: url('images/ETF_launch_tablet.jpeg');
-		transform: translateX(0);
-	}
-
-	.slide.slide-globalETFPortfolios {
-		background-image: url('images/bundle_tablet.jpeg');
-		transform: translateX(0);
-	}
-
-	.slide.slide-greatMortgageRates {
-		background-image: url('images/mtg-awareness-tablet.jpeg');
-		transform: translateX(0);
-	}
+	
 
 	.tabs {
 		height: 7.6rem;
@@ -155,27 +165,16 @@ export default function Banner() {
 		return `tabs ${getTabName(currentTab)}`
 	}
 
+    function getSlideClass(tab:Tab) {
+        let res = getTabName(tab)
+		if (tab === currentTab) return `slide ${res} selected`
+		return  `slide ${res}`
+	}
+
 	function getTabClass(tab: Tab) {
 		let res = getTabName(tab)
 		if (tab === currentTab) return `${res} selected`
 		return res
-	}
-
-	function renderSlide() {
-		switch (currentTab) {
-			case Tab.SaveWith:
-				return (
-					<div className='slide slide-saveWith'></div>
-				)
-			case Tab.GlobalETFPortfolios:
-				return (
-					<div className='slide slide-globalETFPortfolios'></div>
-				)
-			default:
-				return (
-					<div className='slide slide-greatMortgageRates'></div>
-				)
-		}
 	}
 
 	function moveToPrev() {
@@ -204,11 +203,15 @@ export default function Banner() {
 		}
 	}
 
+
+
 	return (
 		<BannerBox>
 			<div className='slide-box'>
-				{renderSlide()}
-
+					<div className={getSlideClass(Tab.SaveWith)}></div>
+					<div className={getSlideClass(Tab.GlobalETFPortfolios)}></div>
+					<div className={getSlideClass(Tab.GreatMortgageRates)}></div>
+				 
 				<div
 					className='nav nav-prev'
 					aria-label='Previous'

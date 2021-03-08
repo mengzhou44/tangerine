@@ -59,10 +59,22 @@ const GlobalStyle = createGlobalStyle`
 
   @keyframes moveToRight {
         0% {
-            transform: translateX(-50%);
+            transform: translateX(-100%);
         }
         100% {
            transform: translateX(0)  
+        }
+  }
+
+
+  @keyframes fadeout {
+        0% {
+            opacity: 1;
+            visibility: visible; 
+        }
+        100% {
+            opacity: 0; 
+            visibility: hidden;
         }
   }
 
