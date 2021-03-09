@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
         --text-color: rgb(51,51,51);
         --tab-color: rgb(117,117,117);
         --card-border-color:  #e0e0e0;
+        --feedback: #757575;
        
         --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
         --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
