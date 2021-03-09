@@ -70,7 +70,7 @@ export const ProductsBox = styled.div`
             margin-bottom: 5rem; 
             text-align: center;
 
-            ${respond(BreakPoint.large, `
+            ${respond(BreakPoint.largest, `
               width: 100%;
               margin-bottom: 2rem; 
            `)}

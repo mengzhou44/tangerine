@@ -1,4 +1,3 @@
- 
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import { Button, ButtonTypes } from '../_shared/Button'
@@ -69,9 +68,10 @@ const ContentBox =  styled.div`
 
        .nav-products {
            width: 100%; 
-         
+           padding: 0; 
            
            li {
+               margin: 0;
                padding-left: 2rem; 
                
                border-left: 3px solid #fff;
@@ -87,8 +87,6 @@ const ContentBox =  styled.div`
 
            a {
               color: var(--text-color);
-
-              
            }
        }
 

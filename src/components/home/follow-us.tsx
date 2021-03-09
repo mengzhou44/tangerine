@@ -41,7 +41,13 @@ const Box = styled.div`
 
          li{
              margin-right: .5rem; 
+             img{
+                 width: 2.5rem;
+                 height: 2.4rem; 
+             }
          }
+
+          
 
          ${respond(
 			BreakPoint.medium,

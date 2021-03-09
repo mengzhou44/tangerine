@@ -78,6 +78,18 @@ const HeaderBox = styled.header`
        }
     }
 
+    .language {
+        display: flex; 
+        align-items:center;
+        
+        .fr{
+             
+            display: flex; 
+            align-items:center;
+            justify-content: center; 
+            font-size:1.8rem;
+        }
+    }
     .icon-search, .icon-location{
        
         display: flex; 
@@ -107,6 +119,7 @@ const HeaderBox = styled.header`
 
                 .buttons {
                     button, 
+                    .language,
                     .icon-location {
                         display: none; 
                     }
@@ -137,7 +150,7 @@ export default function Header(){
      return <HeaderBox>
         
           <div className='menu' onClick={()=>  setShowNav(true)}>
-              <i  className="icon-hamburgermenu" aria-label="Menu opens dialog"></i>
+              <i  className='icon-hamburgermenu' aria-label='Menu opens dialog'></i>
         </div>
          <a href='#' className='logo'>
             <img src='./images/brand.png' alt='brand' />
@@ -167,6 +180,11 @@ export default function Header(){
         <div className='buttons'>
             <Button buttonType={ButtonTypes.white}>Sign Me Up</Button>
             <Button buttonType={ButtonTypes.transparent}>Log Me In</Button>
+
+            <span className='language'>
+             <span className='material-icons'>language</span>
+             <span className='fr'>FR</span>
+            </span>
             <i className='icon-location' />
             <i className='icon-search' />
           

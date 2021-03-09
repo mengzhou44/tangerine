@@ -25,6 +25,7 @@ const FooterBox  = styled.footer`
          padding-left: 2rem; 
 
          ul{
+             margin-top: 2rem; 
              display: flex; 
              flex-direction: column; 
          }
