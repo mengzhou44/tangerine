@@ -109,7 +109,6 @@ export const ProductsBox = styled.div`
             }
             .text{
                margin-top: 3rem; 
-
                button {
                    margin-top: 2rem; 
                }
@@ -127,11 +126,17 @@ export const ProductsBox = styled.div`
             h2{
                 font-size: 2.8rem; 
                 font-weight: 700; 
+                ${respond(BreakPoint.small, `
+                      font-size: 2.4rem; 
+                   `)}
             }
 
             p {
                 font-size: 1.8rem;
             }
+
+           
+
         }
 
         .img-box {
@@ -149,25 +154,25 @@ export default function Products() {
            <h1>
               What can we help you with today?
           </h1>
-          <div className="card-box">
-              <div className="card">
+          <div className='card-box'>
+              <div className='card'>
                    <h2>Saving</h2>
                    <p>Grow your money and save for your goals.</p> 
                    <a href='#'>Learn More</a>
               </div>
-              <div className="card">
+              <div className='card'>
                    <h2>Spending</h2>
                    <p>No-fee daily chequing. Money‑Back Credit Card.</p> 
                    <a href='#'>Learn More</a>
               </div>
        
-              <div className="card">
+              <div className='card'>
                    <h2>Investing</h2>
                    <p>Do your future a favour.</p> 
                    <a href='#'>Learn More</a>
               </div>
        
-              <div className="card">
+              <div className='card'>
                    <h2>Borrowing</h2>
                    <p>A smart and affordable way to borrow.</p> 
                    <a href='#'>Learn More</a>
@@ -175,8 +180,8 @@ export default function Products() {
        
           </div>
      
-          <div className="secure">
-              <div className="text">
+          <div className='secure'>
+              <div className='text'>
                  <h2>Safe and secure banking</h2>
                  <p>
                    Your safety and security is a top priority for us. We use proven security technology, strict privacy standards, identity confirmation controls and 24/7/365 real-time monitoring on transactions.
@@ -184,7 +189,7 @@ export default function Products() {
                  
                  <Button buttonType={ButtonTypes.solid} >Learn More</Button>
               </div>
-              <div className="img-box">
+              <div className='img-box'>
                   <img src='images/security-checkmark.jpeg' alt='security' />
               </div>
             

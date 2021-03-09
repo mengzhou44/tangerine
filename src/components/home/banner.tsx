@@ -59,6 +59,12 @@ const BannerBox = styled.div`
 			right: 1rem;
 		}
 
+        ${respond(BreakPoint.small, `
+                 .nav {
+                     display: none; 
+                 }
+        `)}
+
         .slide {
             height: 100%;
             width: 100%;
@@ -81,9 +87,10 @@ const BannerBox = styled.div`
                 z-index:2; 
                 width: 45rem; 
 
-                ${respond(BreakPoint.medium, `
-                      left:2rem; 
-                      padding: 3rem; 
+                ${respond(BreakPoint.small, `
+                      left: 50%;
+                      top: 50%;
+                      transform: translate(-50%, -50%);
                       text-align: center;
                       align-items: center; 
                `)}
@@ -93,20 +100,20 @@ const BannerBox = styled.div`
                     font-weight: 700;
                     text-align:  left; 
                     line-height: 135%;
-
+                    max-width: 90%;
                     ${respond(BreakPoint.medium, `
                         font-size: 3.2rem;
                         text-align: center; 
                         
                     `)}
                 }
+
                 .info{
                     margin-top: 3.2rem; 
                     margin-bottom: 4rem; 
-                    
                     font-size: 1.6rem; 
                     line-height: 2.2rem; 
-                    
+                    max-width: 80%;
                 }
             }
 
@@ -165,7 +172,10 @@ const BannerBox = styled.div`
 		color: var(--tab-color);
 		font-weight: 700;
 
-       
+        ${respond(BreakPoint.small, `
+                font-size: 1.5em; 
+        `)}
+
 		li {
 			cursor: pointer;
 			flex: 1;

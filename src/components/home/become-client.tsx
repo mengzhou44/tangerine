@@ -19,6 +19,14 @@ const Box = styled.div`
 
         display: flex;
     	align-items: center;
+
+        ${respond(
+			BreakPoint.small,
+		 `
+           background-position: 75%;
+         `
+	   )}
+
    }
 
    .bottom {
@@ -29,7 +37,8 @@ const Box = styled.div`
 			BreakPoint.medium,
 			`
             .bottom {
-                display: block; 
+                display: block;
+                 
             }
 
             .top .content {
@@ -68,6 +77,9 @@ const Box = styled.div`
 				font-size: 3rem;
 				font-weight: 700;
 				margin-bottom: 3rem;
+                ${respond(BreakPoint.small, `
+                      font-size: 2.4rem; 
+               `)}
 			}
 
 			p {
@@ -90,9 +102,9 @@ const Box = styled.div`
 
 			${respond(
 				BreakPoint.medium,
-				`
+				 `
                       width:100%;
-                    `
+                  `
 			)}
 		}
 	}
@@ -122,10 +134,10 @@ export default function BecomeClient() {
 		)
 	}
 	return <Box>
-         <div className="top">
+         <div className='top'>
             {renderContent()}
          </div>
-         <div className="bottom">
+         <div className='bottom'>
             {renderContent()}
          </div>
             
