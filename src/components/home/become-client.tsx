@@ -4,25 +4,45 @@ import { Button, ButtonTypes } from '../_shared/Button'
 import { BreakPoint, respond } from '../_styles/media'
 
 const Box = styled.div`
- 
-	height: 54.1rem;
-	margin-bottom: 5rem;
-	position: relative;  
 
-    display:flex;
-    align-items:center; 
+   margin-bottom: 5rem;
+   .top { 
+        height: 54.1rem;
+      
+        position: relative;
+        background-image: url('images/H2_banner_desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
 
-	${respond(
-		BreakPoint.medium,
-		`
-            height: auto;
+        margin-bottom: 5rem;
+
+        display: flex;
+    	align-items: center;
+   }
+
+   .bottom {
+       display:none; 
+   }
+
+   ${respond(
+			BreakPoint.medium,
+			`
+            .bottom {
+                display: block; 
+            }
+
+            .top .content {
+                display: none; 
+            }
         `
 	)}
 
-	.wrapper {
+
+   .content {
 		width: 80%;
 		margin: 0 auto;
-       
+
 		${respond(
 			BreakPoint.largest,
 			`
@@ -33,11 +53,10 @@ const Box = styled.div`
 		)}
 
 		.card {
-           
 			height: auto;
 			background-color: #fff;
 			border-radius: 6px;
-			width: 50rem;
+			width: 56%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -77,44 +96,12 @@ const Box = styled.div`
 			)}
 		}
 	}
-
-	.img-box {
-		position: absolute;
-		top: 0;
-		left: 0;
-        height:100%;
-        width: 100%;
-
-		z-index: -1;
-
-	 
-		${respond(
-			BreakPoint.medium,
-			`
-                        position: static;
-                        height:auto;
-                        margin-bottom:2rem; 
-                        overflow: hidden;
-
-                        img{
-                            object-fill: cover; 
-                        }
-                    `
-		)}
-	}
 `
 
 export default function BecomeClient() {
-	return (
-		<Box>
-			<div className='wrapper'>
-				<div className='img-box'>
-					<img
-						src='images/H2_banner_desktop.jpg'
-						alt='photo'
-					/>
-				</div>
-
+	function renderContent() {
+		return (
+			<div className='content'>
 				<div className='card'>
 					<h2>Why become a Client?</h2>
 					<p>
@@ -128,10 +115,19 @@ export default function BecomeClient() {
 					</p>
 
 					<Button buttonType={ButtonTypes.solid}>
-						Sign Up
+						Sign Me Up
 					</Button>
 				</div>
 			</div>
-		</Box>
-	)
+		)
+	}
+	return <Box>
+         <div className="top">
+            {renderContent()}
+         </div>
+         <div className="bottom">
+            {renderContent()}
+         </div>
+            
+        </Box>
 }
