@@ -7,6 +7,7 @@ import Products from './products'
 import Feedback from './feedback'
 import Chatbot from './chatbot'
 import BecomeClient from './become-client'
+import Awards from './awards'
 
 
 export default function Home() {
@@ -15,9 +16,8 @@ export default function Home() {
         <Header />
         <Banner /> 
         <Products />
-       
-       
         <BecomeClient />
+        <Awards />
         <Footer />
         <Feedback/>
         <Chatbot />
