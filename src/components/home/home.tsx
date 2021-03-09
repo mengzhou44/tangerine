@@ -8,6 +8,8 @@ import Feedback from './feedback'
 import Chatbot from './chatbot'
 import BecomeClient from './become-client'
 import Awards from './awards'
+import Articles from './articles'
+import FollowUs from './follow-us'
 
 
 export default function Home() {
@@ -18,6 +20,8 @@ export default function Home() {
         <Products />
         <BecomeClient />
         <Awards />
+        <Articles />
+        <FollowUs/>
         <Footer />
         <Feedback/>
         <Chatbot />
