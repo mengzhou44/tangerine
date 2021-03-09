@@ -28,15 +28,18 @@ const HeaderBox = styled.header`
        }
 
        .logo {
-            margin-right: 2rem; 
+            margin-right: 2rem;
+            padding-top: 1.3rem;  
             img {
                 height: 3rem;
                 width: auto;
                 max-width: inherit;  
             }
+         
        }
 
        ul {
+           padding-left: 2rem; 
            margin-right: auto; 
            list-style: none;
        }
@@ -68,6 +71,11 @@ const HeaderBox = styled.header`
        display: flex; 
        flex: 0 0 30%;
        justify-content: space-between; 
+
+       button {
+           padding: .6rem 1rem; 
+           font-size: 1.6rem;
+       }
     }
 
     .icon-search, .icon-location{
