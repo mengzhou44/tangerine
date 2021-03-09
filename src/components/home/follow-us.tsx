@@ -5,11 +5,22 @@ const Box = styled.div`
        
      max-width: 94rem;
      margin: 0 auto;
-     margin-bottom: 5rem; 
+     margin-bottom: 6rem; 
 
      display:flex;
      justify-content:space-between; 
      align-items:center; 
+
+
+     ${respond(
+			BreakPoint.large,
+			`
+             padding-left: 3rem; 
+             padding-right: 3rem; 
+          
+        `
+	  )}
+
 
      ${respond(
 			BreakPoint.medium,
@@ -58,8 +69,10 @@ const Box = styled.div`
     
 `
 
+ 
+
 export default function FollowUs() {
-    return  <Box>
+    return     <Box>
        <div className='left'>
            <p> Follow us</p>
            <ul>
@@ -96,4 +109,5 @@ export default function FollowUs() {
            <a href='#'>CDIC Deposit Insurance Information </a>
        </div>
     </Box>
+   
 }
