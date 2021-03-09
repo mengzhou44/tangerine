@@ -6,19 +6,20 @@ import React from 'react'
 import Products from './products'
 import Feedback from './feedback'
 import Chatbot from './chatbot'
- 
-const HomeBox = styled.div`
-    
-`
+import BecomeClient from './become-client'
+
 
 export default function Home() {
    
-    return <HomeBox>
+    return <div>
         <Header />
         <Banner /> 
         <Products />
+       
+       
+        <BecomeClient />
         <Footer />
         <Feedback/>
         <Chatbot />
-    </HomeBox>
+    </div>
 }
