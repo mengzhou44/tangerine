@@ -16,7 +16,7 @@ export const Button = styled.button<ButtonProps>`
      display: inline-block;
        
      //content 
-     line-height: 1;
+    
      text-align: center;
 
      //box-model 

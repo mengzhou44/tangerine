@@ -124,11 +124,9 @@ export const ProductsBox = styled.div`
 
         .img-box {
             flex: 1;
-            display: flex;
-           
             img{
                 width: 80%;
-                height: auto; 
+                height: 80%; 
                 float: right; 
             }
         }
@@ -138,9 +136,9 @@ export const ProductsBox = styled.div`
             .img-box {
                 order: -1;
                 img {
-                    max-width: 15rem;
-                    height: auto;  
-                    float:none; 
+                    width:  15rem;
+                    height: 15rem;
+                    float: none; 
                 } 
             }
             .text{

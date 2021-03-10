@@ -8,6 +8,7 @@ const FeedbackBox = styled.div`
     right:0;
     top: 50%;
     transform: translateY(-50%);
+    z-index:9;
 
     width:8rem;
     height:3rem; 

@@ -13,7 +13,7 @@ const Box = styled.div`
      ${respond(
 			BreakPoint.small,
 		 	`
-             margin-top: 20rem;  
+             margin-top: 22rem;  
      `)}
 
      h2 {

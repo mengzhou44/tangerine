@@ -5,6 +5,7 @@ import { BreakPoint, respond } from '../_styles/media'
 const ChatbotBox = styled.div`
     //layout 
     position: fixed;
+    z-index:9;
     bottom: 5rem;
     right: 3rem;
     width: 5rem;

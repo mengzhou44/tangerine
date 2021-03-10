@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import { BreakPoint, respond } from '../_styles/media'
 import { Button, ButtonTypes } from '../_shared/Button'
 import { LinkButton } from '../_shared/LinkButton'
  
@@ -14,7 +15,7 @@ const NavigationBox =  styled.div`
    z-index: 1000; 
    background-color: rgba(0,0,0, .7);
    animation: moveToRight .5s;  
-  
+
 `
 
 export default function Navigation({onClose}) {
@@ -28,7 +29,8 @@ const ContentBox =  styled.div`
        left:0;
        top: 0;
        width:  30rem;
-       height: 100%;  
+       height: 100%;
+      
        
        display: flex; 
        flex-direction: column;
@@ -38,7 +40,7 @@ const ContentBox =  styled.div`
        transition: all .5s; 
      
        .nav-buttons {
-           flex: 0 0 10rem;
+           flex: 0 0 15rem;
            position: relative; 
           
            background-color: var(--primary);

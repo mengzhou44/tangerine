@@ -60,11 +60,12 @@ const Box = styled.div`
 		padding-top: 3rem;
 
           .title {
-               height: 7.6rem; 
+               height: 7.6rem;
                font-size: 2.8rem; 
                font-weight: 700; 
                margin-bottom: 2rem; 
                line-height: 140%;
+
           }
           .text {
                font-size: 1.8rem; 
@@ -74,11 +75,21 @@ const Box = styled.div`
           }
 
           ${respond(BreakPoint.medium, `
+            
              .text {
                  display: none;
              }
                     
            `)}
+
+           ${respond(BreakPoint.small, `
+            
+            .title {
+               height: auto;
+            }
+                   
+          `)}
+
 
 	}
 `

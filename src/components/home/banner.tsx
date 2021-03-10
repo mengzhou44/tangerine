@@ -118,7 +118,7 @@ const BannerBox = styled.div`
                       
                       
                        .title{
-                            font-size:  3.8rem; 
+                            font-size:  3rem; 
                        }
 
                        .info{
