@@ -5,7 +5,8 @@ import { BreakPoint, respond } from '../_styles/media'
 
 const Box = styled.div`
 
-   margin-bottom: 5rem;
+    margin-bottom: 5rem;
+
    .top { 
         height: 54.1rem;
       
@@ -36,17 +37,32 @@ const Box = styled.div`
    ${respond(
 			BreakPoint.medium,
 			`
+            margin-bottom: 1rem;
             .bottom {
                 display: block;
                  
             }
-
             .top .content {
                 display: none; 
             }
+           
         `
 	)}
 
+
+    ${respond(
+			BreakPoint.small,
+			`
+            position: relative; 
+            .bottom {
+               position: absolute; 
+               top: 40rem;
+               left: 0;
+               z-index: 2;
+            }
+           
+        `
+	)}
 
    .content {
 		width: 80%;
@@ -74,8 +90,6 @@ const Box = styled.div`
 			z-index: 2;
 
 			h2 {
-				font-size: 3rem;
-				font-weight: 700;
 				margin-bottom: 3rem;
                 ${respond(BreakPoint.small, `
                       font-size: 2.4rem; 
@@ -83,10 +97,7 @@ const Box = styled.div`
 			}
 
 			p {
-				font-size: 1.8rem;
-				line-height: 2.2rem;
 				color: var(--text-color);
-
 				${respond(
 					BreakPoint.large,
 					`
@@ -139,7 +150,6 @@ export default function BecomeClient() {
          </div>
          <div className='bottom'>
             {renderContent()}
-         </div>
-            
+         </div>   
         </Box>
 }

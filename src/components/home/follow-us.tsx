@@ -11,7 +11,6 @@ const Box = styled.div`
      justify-content:space-between; 
      align-items:center; 
 
-
      ${respond(
 			BreakPoint.large,
 			`
@@ -46,8 +45,6 @@ const Box = styled.div`
                  height: 2.4rem; 
              }
          }
-
-          
 
          ${respond(
 			BreakPoint.medium,

@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 
 import './icon-fonts.css'
+import { BreakPoint, respond } from './media';
 import './tangerine-fonts.css'
 
 const GlobalStyle = createGlobalStyle`
@@ -44,8 +45,42 @@ const GlobalStyle = createGlobalStyle`
      line-height: 1.6; 
   }
 
+  h1 {
+      font-size: 4.4rem;
+      font-weight:  700;
 
+      ${respond(
+			BreakPoint.medium,
+			` 
+                font-size: 3.8rem;
+     
+              `
+       )}
+  }
  
+  h2 {
+      font-size: 2.8rem;
+      font-weight: 700; 
+
+      ${respond(
+			BreakPoint.medium,
+			` 
+              font-size: 2.4rem;
+          `
+       )}
+  }
+
+  p {
+      font-size: 1.8rem; 
+      line-height: 140%;
+      ${respond(
+			BreakPoint.medium,
+			` 
+              font-size: 1.4rem;
+          `
+       )}
+  }
+
   @keyframes moveToRight {
         0% {
             transform: translateX(-100%);

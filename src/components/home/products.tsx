@@ -21,6 +21,8 @@ export const ProductsBox = styled.div`
         margin-bottom: 6rem; 
         ${respond(BreakPoint.medium, `
                font-size: 3.2rem;
+               margin-top: 4rem; 
+               margin-bottom: 4rem; 
         `)}
     }
 
@@ -71,8 +73,8 @@ export const ProductsBox = styled.div`
             text-align: center;
 
             ${respond(BreakPoint.largest, `
-              width: 100%;
-              margin-bottom: 2rem; 
+                width: 100%;
+                margin-bottom: 2rem; 
            `)}
 
         }
@@ -97,23 +99,7 @@ export const ProductsBox = styled.div`
             padding-right: 3rem; 
        `)}
         
-        ${respond(BreakPoint.medium, `
-            flex-direction: column;
-            .img-box {
-                order: -1; 
-                img {
-                    max-width: 15rem;
-                    height: auto; 
-                    float: none; 
-                }
-            }
-            .text{
-               margin-top: 3rem; 
-               button {
-                   margin-top: 2rem; 
-               }
-            }
-        `)}
+     
 
         .text{
             flex: 3;
@@ -134,19 +120,36 @@ export const ProductsBox = styled.div`
             p {
                 font-size: 1.8rem;
             }
-
-           
-
         }
 
         .img-box {
             flex: 1;
+            display: flex;
+           
             img{
-                 width: 80%;
-                 height: auto; 
-                float: right;
+                width: 80%;
+                height: auto; 
+                float: right; 
             }
         }
+
+        ${respond(BreakPoint.medium, `
+            flex-direction: column;
+            .img-box {
+                order: -1;
+                img {
+                    max-width: 15rem;
+                    height: auto;  
+                    float:none; 
+                } 
+            }
+            .text{
+               margin-top: 3rem; 
+               button {
+                   margin-top: 2rem; 
+               }
+            }
+        `)}
     }
 `
 export default function Products() {

@@ -10,17 +10,19 @@ const Box = styled.div`
      padding: 2rem;
      padding-top: 6rem; 
 
+     ${respond(
+			BreakPoint.small,
+		 	`
+             margin-top: 20rem;  
+     `)}
+
      h2 {
-         font-size: 2.8rem;
-         font-weight:  700;
          margin-bottom: 2rem; 
          text-align:center; 
      }
 
      p {
-         font-size: 1.8rem; 
          text-align:center; 
-         line-height: 140%;
          padding: 2rem; 
      }
 

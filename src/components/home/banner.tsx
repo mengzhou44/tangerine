@@ -30,7 +30,7 @@ const BannerBox = styled.div`
 			justify-content: center;
 			align-items: center;
 			background-color: var(--tab-color);
-            z-index: 3; 
+			z-index: 3;
 
 			cursor: pointer;
 			transition: all 0.2s;
@@ -59,107 +59,127 @@ const BannerBox = styled.div`
 			right: 1rem;
 		}
 
-        ${respond(BreakPoint.small, `
+		${respond(
+			BreakPoint.small,
+			`
                  .nav {
                      display: none; 
                  }
-        `)}
+        `
+		)}
 
-        .slide {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left:0;
-            top:0; 
-            background-color: var(--text-color);
-            background-size: cover;
-            visibility: hidden; 
+		.slide {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: var(--text-color);
+			background-size: cover;
+			visibility: hidden;
 
-            .content {
-                position: absolute; 
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start; 
-                margin-right: 2rem; 
-                top: 2rem;
-                left:15rem; 
-                color: #fff;
-                z-index:2; 
-                width: 45rem; 
+			.content {
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
 
-                ${respond(BreakPoint.small, `
+				top: 2rem;
+				left: 15rem;
+				color: #fff;
+				z-index: 2;
+				width: 45rem;
+                max-width: 100%;
+
+				.title {
+					font-size: 4.4rem;
+					font-weight: 700;
+					text-align: left;
+					line-height: 135%;
+					max-width: 90%;
+				}
+
+				.info {
+					margin-top: 3.2rem;
+					margin-bottom: 4rem;
+					font-size: 1.6rem;
+					line-height: 140%;
+					max-width: 90%;
+				}
+
+				${respond(
+					BreakPoint.medium,
+					`
                       left: 50%;
                       top: 50%;
                       transform: translate(-50%, -50%);
-                      text-align: center;
-                      align-items: center; 
-               `)}
+                      text-align: left;
+                      padding-left: 1rem;  
+                      
+                      
+                       .title{
+                            font-size:  3.8rem; 
+                       }
 
-                .title{
-                    font-size: 4.8rem; 
-                    font-weight: 700;
-                    text-align:  left; 
-                    line-height: 135%;
-                    max-width: 90%;
-                    ${respond(BreakPoint.medium, `
-                        font-size: 3.2rem;
-                        text-align: center; 
-                        
-                    `)}
-                }
+                       .info{
+                            margin-top: 2.0rem; 
+                            margin-bottom: 3rem; 
+                            font-size: 1.4rem; 
+                        }
+                    
+               `
+				)}
+			}
 
-                .info{
-                    margin-top: 3.2rem; 
-                    margin-bottom: 4rem; 
-                    font-size: 1.6rem; 
-                    line-height: 2.2rem; 
-                    max-width: 80%;
-                }
-            }
+			.img-box {
+				position: absolute;
+				display: block;
+				right: 0;
+				top: 0;
+				border-bottom-left-radius: 7rem;
+				width: 67rem;
+				height: 100%;
+			}
+		}
 
-            .img-box {
-                position: absolute; 
-                display: block; 
-                right:0;
-                top: 0; 
-                border-bottom-left-radius: 7rem;
-                width:  67rem;
-                height: 100%; 
-            }
-            
-        }
-
-        .saveWith .img-box{
-                background-image: url('./images/bundle_desktop.jpeg');
-                background-size: cover;
-                ${respond(BreakPoint.largest, `
+		.saveWith .img-box {
+			background-image: url('./images/bundle_desktop.jpeg');
+			background-size: cover;
+			${respond(
+				BreakPoint.largest,
+				`
                     background-image: url('./images/bundle_tablet.jpeg');
-                `)}
-        }
+                `
+			)}
+		}
 
-        .globalETFPortfolios .img-box {
-                background-image: url('./images/ETF_launch_desktop.jpeg');
-                background-size: cover;
-                ${respond(BreakPoint.largest, `
+		.globalETFPortfolios .img-box {
+			background-image: url('./images/ETF_launch_desktop.jpeg');
+			background-size: cover;
+			${respond(
+				BreakPoint.largest,
+				`
                     background-image: url('./images/ETF_launch_tablet.jpeg');
-                `)}
-	     }
+                `
+			)}
+		}
 
-         .greatMortgageRates .img-box  {
-                background-image: url('./images/mtg-awareness-desktop.jpeg');
-                background-size: cover;
-                ${respond(BreakPoint.largest, `
+		.greatMortgageRates .img-box {
+			background-image: url('./images/mtg-awareness-desktop.jpeg');
+			background-size: cover;
+			${respond(
+				BreakPoint.largest,
+				`
                     background-image: url('./images/mtg-awareness-tablet.jpeg');
-                `)}
-		  }
+                `
+			)}
+		}
 
-
-         .selected {
-            visibility: visible;
-            animation: moveToRight 1s; 
-        }
+		.selected {
+			visibility: visible;
+			animation: moveToRight 1s;
+		}
 	}
-
 
 	.tabs {
 		height: 7.6rem;
@@ -172,9 +192,12 @@ const BannerBox = styled.div`
 		color: var(--tab-color);
 		font-weight: 700;
 
-        ${respond(BreakPoint.small, `
-                font-size: 1.5em; 
-        `)}
+		${respond(
+			BreakPoint.small,
+			`
+                font-size: 1.7rem; 
+        `
+		)}
 
 		li {
 			cursor: pointer;
@@ -182,25 +205,25 @@ const BannerBox = styled.div`
 			display: flex;
 			justify-content: center;
 			align-items: center;
-            text-align: center; 
-            position: relative;
+			text-align: center;
+			position: relative;
 			margin: 1.5rem 0;
 
 			&:not(:last-of-type) {
 				border-right: 1px solid var(--tab-color);
 			}
-   
+
 			&.selected {
 				border-right: none;
 				background-color: var(--primary);
 				color: #fff;
 				margin: 0;
-              
+
 				position: relative;
-                z-index:1;
+				z-index: 1;
 			}
 
-			&.selected::before{
+			&.selected::before {
 				width: 30px;
 				height: 30px;
 				content: '';
@@ -242,10 +265,10 @@ export default function Banner() {
 		return `tabs ${getTabName(currentTab)}`
 	}
 
-    function getSlideClass(tab:Tab) {
-        let res = getTabName(tab)
+	function getSlideClass(tab: Tab) {
+		let res = getTabName(tab)
 		if (tab === currentTab) return `slide ${res} selected`
-		return  `slide ${res}`
+		return `slide ${res}`
 	}
 
 	function getTabClass(tab: Tab) {
@@ -280,12 +303,10 @@ export default function Banner() {
 		}
 	}
 
-
-
 	return (
 		<BannerBox>
 			<div className='slide-box'>
-            <div className={getSlideClass(Tab.SaveWith)}>
+				<div className={getSlideClass(Tab.SaveWith)}>
 					<div className='content'>
 						<div className='title'>
 							Ready to make every
@@ -306,8 +327,8 @@ export default function Banner() {
 							Learn More
 						</Button>
 					</div>
-				 
-                    <div className='img-box'></div>
+
+					<div className='img-box'></div>
 				</div>
 				<div
 					className={getSlideClass(
@@ -331,7 +352,7 @@ export default function Banner() {
 						</Button>
 					</div>
 
-                    <div className='img-box'></div>
+					<div className='img-box'></div>
 				</div>
 				<div
 					className={getSlideClass(
@@ -356,7 +377,7 @@ export default function Banner() {
 							Learn More
 						</Button>
 					</div>
-                    <div className='img-box'></div>
+					<div className='img-box'></div>
 				</div>
 				<div
 					className='nav nav-prev'
@@ -372,7 +393,6 @@ export default function Banner() {
 				>
 					<i className='icon-rightarrow'></i>
 				</div>
-
 			</div>
 
 			<ul className={getTabsClass()}>

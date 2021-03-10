@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { BreakPoint, respond } from '../_styles/media'
 
 
 const FeedbackBox = styled.div`
@@ -21,6 +22,13 @@ const FeedbackBox = styled.div`
     border-radius: 0 0 5px 5px; 
 
     font-size: 1.4rem; 
+
+    ${respond(
+			BreakPoint.medium,
+			`
+               display:none;
+            `
+    )}
 
 `
 

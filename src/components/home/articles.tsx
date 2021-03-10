@@ -10,7 +10,6 @@ const Box = styled.div`
      color: var(--text-color);
 
 	h2 {
-		font-size: 2.8rem;
 		margin-bottom: 3rem;
 		text-align: center;
 	}
@@ -36,7 +35,6 @@ const Box = styled.div`
 		border: 2px solid var(--grey-1);
 		border-radius: 3px;
 		overflow: hidden;
-
           img {
 			height: 25rem;
 			width: 100%;
@@ -74,6 +72,14 @@ const Box = styled.div`
                margin-bottom: 2rem; 
                line-height: 120%;
           }
+
+          ${respond(BreakPoint.medium, `
+             .text {
+                 display: none;
+             }
+                    
+           `)}
+
 	}
 `
 

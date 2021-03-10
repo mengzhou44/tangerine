@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { BreakPoint, respond } from '../_styles/media'
 
 
 const ChatbotBox = styled.div`
@@ -37,6 +38,12 @@ const ChatbotBox = styled.div`
        box-shadow: none; 
     }
 
+    ${respond(
+			BreakPoint.medium,
+			`
+               display:none;
+            `
+    )}
 
 `
 
