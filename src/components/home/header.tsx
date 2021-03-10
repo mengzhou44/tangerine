@@ -35,6 +35,7 @@ const HeaderBox = styled.header`
                 width: auto;
                 max-width: inherit;  
             }
+
          
        }
 
@@ -113,6 +114,11 @@ const HeaderBox = styled.header`
                    display: block;  
                 } 
 
+                .logo {
+                    padding-top: 0rem; 
+                    margin-right: 0rem; 
+                }
+
                 .products {
                    display:none; 
                 } 
@@ -123,6 +129,7 @@ const HeaderBox = styled.header`
                     .icon-location {
                         display: none; 
                     }
+
                     display: block; 
                     flex: 0; 
                 }
@@ -135,8 +142,6 @@ const HeaderBox = styled.header`
 
             `
       )}
-   
-
 `
  
 export default function Header(){

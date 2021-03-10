@@ -126,7 +126,11 @@ const BannerBox = styled.div`
                             margin-bottom: 3rem; 
                             font-size: 1.4rem; 
                         }
-                    
+
+						button {
+                            padding: .5rem 1rem; 
+                        }
+						
                `
 				)}
 			}
