@@ -85,47 +85,47 @@ export default function  Footer() {
      return <FooterBox>
         <ul>
           <li>
-              <a href='#'><span className='icon-aboutus'></span>About Us</a>
+              <a href='https://www.easyexpresssoft.com'><span className='icon-aboutus'></span>About Us</a>
           </li>
           <li>
-              <a href='#'><span className='icon-star'></span>Rates</a>
+              <a href='https://www.easyexpresssoft.com'><span className='icon-star'></span>Rates</a>
           </li>
           <li>
-              <a href='#'><span className='icon-help'></span>FAQs</a>
+              <a href='https://www.easyexpresssoft.com'><span className='icon-help'></span>FAQs</a>
           </li>
           <li>
-              <a href='#'>
+              <a href='https://www.easyexpresssoft.com'>
                   <span className='icon-careers'></span>
                   Careers</a>
           </li>
           <li>
-              <a href='#'>  <span className='icon-privacy'></span> Privacy</a>
+              <a href='https://www.easyexpresssoft.com'>  <span className='icon-privacy'></span> Privacy</a>
           </li>
           <li>
-              <a href='#'>
+              <a href='https://www.easyexpresssoft.com'>
                  <span className='icon-legal'></span>
                   Legal
                   </a>
           </li>
           <li>
-              <a href='#'>
+              <a href='https://www.easyexpresssoft.com'>
                   <span className='icon-security'></span>
                   Security
              </a>
           </li>
           <li>
-              <a href='#'>
+              <a href='https://www.easyexpresssoft.com'>
                  <span className='icon-gallery'></span>
                   Accessibility
             </a>
           </li>
           <li>
-              <a href='#'>
+              <a href='https://www.easyexpresssoft.com'>
               <span className='icon-location'></span>
               ABM Locator</a>
           </li>
           <li>
-              <a href='#'>
+              <a href='https://www.easyexpresssoft.com'>
                  <span className='icon-chat'></span>
                   Contact Us</a>
           </li>

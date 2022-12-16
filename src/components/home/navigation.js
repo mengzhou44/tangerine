@@ -144,22 +144,22 @@ export function Content({onClose}) {
        
         <ul className={getClass('nav-products')}>  
              <li>
-                 <a href='#'>
+                 <a href='https://www.easyexpresssoft.com'>
                    Products
                 </a>
             </li>
             <li>
-                <a href='#'>
+                <a href='https://www.easyexpresssoft.com'>
                   Ways to Bank 
                 </a>
             </li>
             <li>
-                <a href='#'>
+                <a href='https://www.easyexpresssoft.com'>
                  Blog
                 </a>
             </li>
             <li>
-                <a href='#'>
+                <a href='https://www.easyexpresssoft.com'>
                 About Us
                 </a>
             </li>
