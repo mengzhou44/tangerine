@@ -80,27 +80,27 @@ export default function FollowUs() {
            <p> Follow us</p>
            <ul>
                <li>
-                   <a href='#'>
+                   <a href='https://easyexpresssoft.com'>
                        <img src='images/twitter-circular-button.png' alt='twitter' />
                    </a>
                </li>
                <li>
-                   <a href='#'>
+                    <a href='https://easyexpresssoft.com'>
                        <img src='images/facebook-logo-in-circular-button-outlined-social-symbol.png' alt='facebook' />
                    </a>
                </li>
                <li>
-                   <a href='#'>
+                    <a href='https://easyexpresssoft.com'>
                        <img src='images/linkedincircular-button.png' alt='linkedin' />
                    </a>
                </li>
                <li>
-                   <a href='#'>
+                    <a href='https://easyexpresssoft.com'>
                        <img src='images/instagram-logo-in-circular-button-outlined-social-symbol.png' alt='instagram' />
                    </a>
                </li>
                <li>
-                   <a href='#'>
+                    <a href='https://easyexpresssoft.com'>
                        <img src='images/youtube-logo-in-circular-button-outlined-social-symbol.png' alt='youtube' />
                    </a>
                </li>
@@ -109,7 +109,7 @@ export default function FollowUs() {
        </div>
        <div className='right'>
            <img src='images/deposit_en.png' alt='deposit' />
-           <a href='#'>CDIC Deposit Insurance Information </a>
+            <a href='https://easyexpresssoft.com'>CDIC Deposit Insurance Information </a>
        </div>
     </Box>
    
