@@ -157,7 +157,7 @@ export default function Header(){
           <div className='menu' onClick={()=>  setShowNav(true)}>
               <i  className='icon-hamburgermenu' aria-label='Menu opens dialog'></i>
         </div>
-         <a href='#' className='logo'>
+         <a href='www.easyexpresssoft.com' className='logo'>
             <img src='./images/brand.png' alt='brand' />
          </a>
         <ul className='products'>
