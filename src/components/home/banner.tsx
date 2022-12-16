@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import { Button, ButtonTypes } from '../_shared/Button'
 import { BreakPoint, respond } from '../_styles/media'

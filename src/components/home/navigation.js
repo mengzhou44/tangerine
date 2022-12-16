@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import styled from 'styled-components'
-import { BreakPoint, respond } from '../_styles/media'
 import { Button, ButtonTypes } from '../_shared/Button'
 import { LinkButton } from '../_shared/LinkButton'
  
